@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
     { title: 'Sobre Nós', link: '/sobre-nos' },
   ];
 
+  rotate: boolean = false;
+
   constructor(private _eref: ElementRef) { }
 
   ngOnInit(): void {
@@ -29,10 +31,12 @@ export class HeaderComponent implements OnInit {
     if (!this._eref.nativeElement.contains(event.target)) {
       this.listMenuMobile!.nativeElement.classList.replace('open-menu', 'close-menu');
       this.containerLabel!.nativeElement.style.background = '#FFFFFF';
+      this.rotate = false;
     }
   }
 
   openMenu(): void {
+    this.rotate = !this.rotate;
     if (this.listMenuMobile!.nativeElement.classList.contains('open-menu')) {
       this.listMenuMobile!.nativeElement.classList.replace('open-menu', 'close-menu');
       this.containerLabel!.nativeElement.style.background = '#FFFFFF';

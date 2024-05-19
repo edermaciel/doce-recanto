@@ -27,9 +27,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   };
 
   secondSectionList: any[] = [
-    { class: 'card__descricao card__descricao-conhecer', title: 'Lazer', subTitle: 'Piscina', description: 'Nada como uma bela piscina no calor, né?!', horarioUso: '8h às 19h', diasUso: 'de terça à domingo', imageClock: 'assets/images/clock.png', image: 'assets/images/piscina.png' },
+    { class: 'card__descricao card__descricao-conhecer', title: 'Lazer', subTitle: 'Piscina', description: 'Espaço amplo com uma piscina cristalina para a família se refrescar!', horarioUso: '8h às 19h', diasUso: 'de terça à domingo', imageClock: 'assets/images/clock.png', image: 'assets/images/piscina.png' },
     { class: 'card__descricao-churrasqueira', title: 'Lazer', subTitle: 'Churrasqueira', description: 'Um ótimo espaço aberto para curtir um churrasco com a família reunida!', horarioUso: '10h às 23h', diasUso: 'de terça à domingo', imageClock: 'assets/images/clock.png', image: 'assets/images/churrasqueira.png' },
-    { class: 'card__descricao-cafe-manha', title: 'Incluso', subTitle: 'Café da Manhã', description: 'Venha se deliciar com um tradicional café mineiro, e claro, o pão de queijo nunca falta por aqui!', horarioUso: '7h às 10h', diasUso: 'de quinta à domingo', imageClock: 'assets/images/clock.png', image: 'assets/images/cafe.png' },
+    { class: 'card__descricao-cafe-manha', title: 'Incluso', subTitle: 'Café da Manhã', description: 'Venha se deliciar com um tradicional café mineiro, e claro, o pão de queijo nunca falta por aqui!', horarioUso: '7h às 10h', diasUso: 'de quinta à domingo', imageClock: 'assets/images/clock.png', image: 'assets/images/cafe-da-manha.jpg' },
   ];
 
   stars = new Array(5);
