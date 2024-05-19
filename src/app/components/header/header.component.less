@@ -12,14 +12,6 @@ hr {
     display            : inline-block;
 }
 
-.container__button:checked~.container__label>.header__menu-hamburguer {
-    background-image: url("/assets/images/menu-aberto.svg");
-}
-
-.container__button:checked~.container__label {
-    background: var(--laranja);
-}
-
 .container {
     display    : flex;
     align-items: center;
@@ -43,9 +35,18 @@ hr {
     border-radius: 10px;
 }
 
-.container__button:checked~.list-menu {
-    display  : block;
-    animation: 1s openMenu;
+.open-menu {
+    background-repeat  : no-repeat;
+    background-position: center;
+    display            : block;
+    animation          : 1s openMenu;
+    z-index            : 9999;
+    box-shadow         : 0 0 16px rgba(0, 0, 0, 0.5);
+    border-radius      : 4px;
+}
+
+.close-menu {
+    background-image: url("/assets/images/menu.svg");
 }
 
 @keyframes openMenu {
@@ -65,7 +66,8 @@ hr {
 }
 
 .list-menu__reservation {
-    background-color: var(--laranja);
+    background-color          : var(--laranja);
+    border-bottom-right-radius: 4px;
 }
 
 .list-menu__reservation-link {
@@ -78,8 +80,9 @@ hr {
 }
 
 .list-menu__title {
-    color      : var(--laranja);
-    font-weight: 700;
+    border-top-right-radius: 4px;
+    color                  : var(--laranja);
+    font-weight            : 700;
 }
 
 .list-menu__link {
@@ -120,13 +123,12 @@ hr {
 
 @media screen and (min-width:1024px) {
     .container__link {
-        transition: transform 0.5s ease;
-        transform : scale(1);
+        transition: transform .5s ease, opacity .5s ease;
     }
 
     .container__link:hover {
         opacity  : 0.8;
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 
     .container__title,
@@ -159,8 +161,7 @@ hr {
     .options__link {
         text-decoration: none;
         color          : var(--preto);
-        transition     : transform 0.5s ease;
-        transform      : scale(1);
+        transition     : transform 1s ease, color .2s ease;
     }
 
     .options__link:hover {
@@ -169,7 +170,7 @@ hr {
         margin-top      : 1em;
         border-radius   : 30em;
         color           : var(--branco);
-        transform       : scale(0.8);
+        transform       : scale(1.05);
 
         .options__item {
             padding-top: 16px;
@@ -224,4 +225,14 @@ hr {
         padding    : 0 1em 1em 0;
         margin-left: -10px;
     }
+}
+
+.rotate {
+    transition: transform 0.5s;
+    transform : rotate(90deg);
+}
+
+.straight {
+    transition: transform 0.5s;
+    transform : rotate(180deg);
 }

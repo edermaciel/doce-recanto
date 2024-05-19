@@ -22,9 +22,9 @@ export class LocalizationComponent implements OnInit, AfterViewInit {
 
   private loadMap(): void {
     const center = new L.LatLng(-22.047632000931056, -45.04335902862759);
-
+    const id = "mapbox/streets-v11"
     this.map = L.map('map').setView([0, 0], 1);
-    L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${environment.mapbox.accessToken}`, {
+    L.tileLayer(`https://api.mapbox.com/styles/v1/${id}/tiles/{z}/{x}/{y}?access_token=${environment.mapbox.accessToken}`, {
       maxZoom: 18,
       id: 'mapbox/streets-v11',
       tileSize: 512,

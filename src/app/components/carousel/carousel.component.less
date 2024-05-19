@@ -1,3 +1,51 @@
+.conhecer-descricao {
+    width         : 50%;
+    display       : flex;
+    flex-direction: column;
+
+    .title-start {
+        align-items: flex-start;
+    }
+
+    .title-end {
+        align-items: flex-end;
+    }
+
+    h3 {
+        color        : var(--laranja);
+        font-weight  : 700;
+        padding      : 0;
+        margin-bottom: -15px;
+    }
+
+    h2 {
+        color      : var(--verde);
+        font-size  : 18px;
+        font-weight: 700;
+        padding    : .5em 0 .3em 0;
+        margin     : 0;
+    }
+
+    p {
+        font-size         : 14px;
+        text-overflow     : ellipsis;
+        overflow          : hidden;
+        display           : -webkit-box !important;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        white-space       : normal;
+    }
+}
+
+.conhecer-img-wrapper {
+    width: 50%;
+
+    img {
+        width: 100%;
+    }
+}
+
+
 .carrossel__titulo {
     color           : var(--laranja);
     background-color: var(--branco);
@@ -29,8 +77,6 @@
 }
 
 .card {
-    background   : var(--branco);
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin       : .5em 1em 3em 1em;
     padding      : 1em;
@@ -42,6 +88,16 @@
     width        : 38%;
 }
 
+.card__descricao,
+.card__descricao-conhecer,
+.card__descricao-churrasqueira,
+.card__descricao-cafe-manha {
+    box-shadow   : 0 3px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding      : 1rem;
+    align-items  : center;
+}
+
 .card__descricao {
     display        : flex;
     justify-content: space-between;
@@ -50,6 +106,7 @@
 
 .card__descricao-churrasqueira {
     display        : flex;
+    flex-direction : row-reverse;
     justify-content: space-between;
     margin-bottom  : .5em;
     margin-top     : 2em;
@@ -67,6 +124,12 @@
     display        : flex;
     justify-content: space-between;
     align-items    : flex-end;
+
+    a {
+        white-space: nowrap;
+        width      : 100%;
+        text-align : center;
+    }
 }
 
 .botoes {
@@ -219,6 +282,10 @@
         display        : flex;
         justify-content: space-between;
         align-items    : flex-end;
+
+        a {
+            width: fit-content;
+        }
     }
 
     .botoes {
@@ -273,8 +340,13 @@
     }
 
     .card {
-        width : 85%;
-        margin: .5em auto 3em auto;
+        max-width      : 60vw;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        margin         : 0 auto;
+        width          : 85%;
     }
 
     .descricao__container-feedback {
@@ -388,7 +460,11 @@
     }
 
     .descricao__titulo {
-        font-size: 32px;
+        font-size    : 32px;
+        color        : var(--laranja);
+        font-weight  : 700;
+        padding      : 0;
+        margin-bottom: -10px;
     }
 
     .descricao__texto {
@@ -429,13 +505,6 @@
         margin-right: 4em;
     }
 
-    .descricao__titulo {
-        color        : var(--laranja);
-        font-weight  : 700;
-        padding      : 0;
-        margin-bottom: -10px;
-    }
-
     .botoes__ancora-lazer {
         padding: 1em 47%;
     }
@@ -444,19 +513,7 @@
         padding: 1em 11em;
     }
 
-    .card__descricao-conhecer {
-        height       : 285px;
-        border-bottom: dashed 1px var(--laranja);
-    }
-
-    .card__descricao-churrasqueira {
-        height        : 285px;
-        border-bottom : dashed 1px var(--laranja);
-        padding-bottom: 1.5em;
-    }
-
     .card {
-        width      : 92%;
-        margin-left: 3em;
+        width: 92%;
     }
 }
